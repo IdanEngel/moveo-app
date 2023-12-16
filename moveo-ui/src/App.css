@@ -6,22 +6,22 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden; 
+  overflow-y: hidden; 
 }
 
 .logo {
   width: 20%;
   margin: 40% 0 0 0;
 }
-footer{
+footer {
   text-align: center;
-
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .logo {
     margin: 50% 0 0 0;
     width: 30%;
-
   }
 }
 
