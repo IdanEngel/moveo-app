@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const rateLimit = require("express-rate-limit");
 const dotenv = require("dotenv");
 dotenv.config({ path: path.resolve(__dirname, ".env") });
-const CodeBlock = require("./models/CodeBlock");
+const CodeBlock = require("../models/CodeBlock");
 var cors = require("cors");
 
 const app = express();
