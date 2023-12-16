@@ -14,20 +14,22 @@ const limiter = rateLimit({
   windowMs: 60, 
   max: 5, // limit each IP to 5 requests per windowMs
 });
-app.set('trust proxy', 2)
+app.set('trust proxy', 3)
 app.use(cors());
 app.use(express.json());
 app.use(limiter);
 
-const io = require("socket.io")(8080, {
+// deepcode ignore HttpToHttps: <only for testing in dev mode>
+const server = http.createServer(app);
+
+const io = require("socket.io")(server,{
   cors: {
     origin: "*",
     methods: ["GET", "POST"],
   },
   maxHttpBufferSize: 1e8,
 });
-// deepcode ignore HttpToHttps: <only for testing in dev mode>
-const server = http.createServer(app);
+
 
 mongoose.connect(process.env.MONGO);
 
