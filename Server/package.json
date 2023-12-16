@@ -1,6 +1,6 @@
 {
   "engines": {
-    "node": "14x"
+    "node": "18x"
   },
   "dependencies": {
     "cors": "^2.8.5",
