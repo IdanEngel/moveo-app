@@ -1,0 +1,33 @@
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: #7fe7dc;
+}
+html,
+body {
+  height: 100%;
+}
+
+.logo {
+  width: 20%;
+  margin: 40% 0 0 0;
+}
+footer{
+  text-align: center;
+
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .logo {
+    margin: 50% 0 0 0;
+    width: 30%;
+
+  }
+}
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .logo {
+    width: 45%;
+    margin: 55% 0 0 0;
+  }
+}

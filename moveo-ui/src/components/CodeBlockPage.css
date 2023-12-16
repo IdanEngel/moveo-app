@@ -1,0 +1,22 @@
+.saveIcon,
+.savedDiv {
+  margin-left: 2.5%;
+  font-size: large;
+  font-family: "Lucida Sans Unicode";
+}
+
+.opener {
+  margin-left: 1rem;
+}
+
+/* Customize the read-only message */
+
+.message p {
+  display: none !important;
+}
+.message::after {
+  content: "A Mentor Can't Edit The Code!" !important;
+}
+.loader {
+  margin: 10rem 0 10rem 50rem;
+}
