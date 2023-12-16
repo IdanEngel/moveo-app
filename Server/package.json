@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "14x"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
