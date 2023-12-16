@@ -14,7 +14,7 @@ const limiter = rateLimit({
   windowMs: 60, 
   max: 5, // limit each IP to 5 requests per windowMs
 });
-
+app.set('trust proxy', 2)
 app.use(cors());
 app.use(express.json());
 app.use(limiter);
