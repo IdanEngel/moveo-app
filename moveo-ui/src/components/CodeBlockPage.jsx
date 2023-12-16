@@ -107,15 +107,17 @@ const CodeBlockPage = () => {
       ) : (
         <BarLoader className="loader" />
       )}
-      <SaveIcon
-        sx={{ cursor: "pointer", fontSize: "55px" }}
-        titleAccess="Save To DB"
-        color="primary"
-        onClick={saveToDb}
-        className="saveIcon"
-      >
-        Save
-      </SaveIcon>{" "}
+      {role === "Student" ? (
+        <SaveIcon
+          sx={{ cursor: "pointer", fontSize: "55px" }}
+          titleAccess="Save To DB"
+          color="primary"
+          onClick={saveToDb}
+          className="saveIcon"
+        >
+          Save
+        </SaveIcon>
+      ) : null}
       <br />
       {saved ? <div className="savedDiv">Saved to Data Base</div> : null}
     </div>
