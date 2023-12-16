@@ -16,7 +16,7 @@ const CodeBlockPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const s = io("https://moveo-app.vercel.app:8080");
+    const s = io("https://moveo-app.onrender.com/:8080");
     setSocket(s);
     // Check if userType is stored in sessionStorage
     const userType = sessionStorage.getItem("userType");
@@ -35,7 +35,7 @@ const CodeBlockPage = () => {
       setRole(userType);
     }
     axios
-      .get(`https://moveo-app.vercel.app:5000/code-block/${title}`)
+      .get(`https://moveo-app.onrender.com/:5000/code-block/${title}`)
       .then((res) => {
         setCode(res.data.code);
         setLoading(false);
@@ -71,7 +71,7 @@ const CodeBlockPage = () => {
   //Saving code to db and check if the solution is correct
   const saveToDb = async () => {
     await axios
-      .post("https://moveo-app.vercel.app:5000/saveToDb", {
+      .post("https://moveo-app.onrender.com/:5000/saveToDb", {
         content: code,
         title: title,
       })
