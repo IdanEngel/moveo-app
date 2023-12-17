@@ -91,19 +91,21 @@ const CodeBlockPage = () => {
 
   return (
     <div>
-      <h1 className="opener">Hello There, {role} &#x263A;</h1>
-      <h2 className="opener">Code Block &#8594; {title}</h2>
       {!loading ? (
-        <Editor
-          options={{ readOnly: role === "Mentor", fontSize: "18px" }}
-          height="35vh"
-          width="100%"
-          theme="vs-dark"
-          value={code}
-          defaultLanguage="javascript"
-          onChange={handleCodeChange}
-          className="codeEditor"
-        />
+        <>
+          <h1 className="opener">Hello There, {role} &#x263A;</h1>
+          <h2 className="opener">Code Block &#8594; {title}</h2>
+          <Editor
+            options={{ readOnly: role === "Mentor", fontSize: "18px" }}
+            height="35vh"
+            width="100%"
+            theme="vs-dark"
+            value={code}
+            defaultLanguage="javascript"
+            onChange={handleCodeChange}
+            className="codeEditor"
+          />
+        </>
       ) : (
         <BarLoader className="loader" />
       )}
