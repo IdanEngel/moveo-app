@@ -103,7 +103,6 @@ app.get("/code-block/:title", async (req, res) => {
 app.post("/saveToDb", async (req, res) => {
   const { title, content } = await req.body;
   try {
-    console.log("body", content);
     await CodeBlock.findOneAndUpdate({ title: title }, { code: content });
     let solution = await CodeBlock.findOne({ solution: content });
     if (solution) {
