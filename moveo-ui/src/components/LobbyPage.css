@@ -15,7 +15,7 @@
 @media screen and (min-width: 1024px) {
   .buttonWrapper {
     display: grid;
-    grid-template-columns: repeat(4, 23rem);
+    grid-template-columns: repeat(4, 20rem);
     justify-content: center;
   }
   
